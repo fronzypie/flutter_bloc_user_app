@@ -1,4 +1,4 @@
-// repositories/post_repository.dart
+
 
 import '../models/post_model.dart';
 
@@ -20,6 +20,5 @@ class PostRepository {
     }
   }
 
-// Other methods like addPost etc.
 }
 

@@ -17,7 +17,7 @@ class Post {
 
   factory Post.fromJson(Map<String, dynamic> json) {
     int parseIntSafe(dynamic value) {
-      if (value == null) return 0;  // Or handle as you want
+      if (value == null) return 0;
       if (value is int) return value;
       if (value is String && value.isNotEmpty) {
         return int.tryParse(value) ?? 0;

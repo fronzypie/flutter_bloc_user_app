@@ -25,8 +25,8 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
         userId: widget.userId,
         title: _titleController.text.trim(),
         body: _bodyController.text.trim(),
-        tags: [],        // Default empty tags
-        reactions: 0,    // Default reaction count
+        tags: [],
+        reactions: 0,
       );
 
       context.read<PostBloc>().add(AddPost(newPost));

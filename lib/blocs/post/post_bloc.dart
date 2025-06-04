@@ -4,7 +4,7 @@ import '../../repositories/post_repository.dart';
 import 'post_event.dart';
 import 'post_state.dart';
 
-// blocs/post/post_bloc.dart
+
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../repositories/post_repository.dart';
@@ -35,7 +35,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
       final List<Post> updatedPosts = List.from((state as PostLoaded).posts)
         ..insert(0, event.post);
       emit(PostLoaded(updatedPosts));
-      // Optionally: call repository to persist the new post
+
     }
   }
 }

@@ -12,7 +12,6 @@ import '../models/todo_model.dart';
 class UserRepository {
   final String baseUrl = 'https://dummyjson.com';
 
-  // Method to fetch paginated users
   Future<List<User>> fetchUsers({required int skip, required int limit}) async {
     final url = Uri.parse('$baseUrl/users?skip=$skip&limit=$limit');
     final response = await http.get(url);
@@ -26,7 +25,6 @@ class UserRepository {
     }
   }
 
-  // Method to search users by query
   Future<List<User>> searchUsers(String query) async {
     final url = Uri.parse('$baseUrl/users/search?q=$query');
     final response = await http.get(url);
@@ -40,7 +38,6 @@ class UserRepository {
     }
   }
 
-  // Method to fetch todos for a specific user
   Future<List<Todo>> fetchUserTodos(int userId) async {
     final url = Uri.parse('$baseUrl/users/$userId/todos');
     final response = await http.get(url);
