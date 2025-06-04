@@ -4,7 +4,7 @@ class User {
   final String lastName;
   final String email;
   final String phone;
-  final String image; // ✅ Add this line
+  final String image;
 
   User({
     required this.id,
@@ -12,7 +12,7 @@ class User {
     required this.lastName,
     required this.email,
     required this.phone,
-    required this.image, // ✅ Add this in constructor
+    required this.image,
   });
 
   factory User.fromJson(Map<String, dynamic> json) {
@@ -22,7 +22,7 @@ class User {
       lastName: json['lastName'],
       email: json['email'],
       phone: json['phone'],
-      image: json['image'], // ✅ Map from JSON
+      image: json['image'],
     );
   }
 }
